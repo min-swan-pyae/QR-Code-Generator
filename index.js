@@ -7,7 +7,7 @@ inquirer
   .then((answer) => {
     const url = answer.URL;
     const qr_svg = qr.image(url);
-    qr_svg.pipe(fs.createWriteStream('qr_img1.png'));
+    qr_svg.pipe(fs.createWriteStream('qr_img.png'));
     fs.writeFile('userInput.txt', url, (err) => {
       if (err) throw err;
     });
